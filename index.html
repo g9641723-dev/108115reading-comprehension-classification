@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>會考英語練習室｜111–115 歷屆試題</title><link rel="stylesheet" href="quiz.css"></head>
+<body>
+<header class="top"><a class="brand" href="111-115會考英語_互動測驗.html"><span class="logo">E<span>＋</span></span><span>會考英語<span class="brand-sub">練習室 · 111—115</span></span></a><div class="top-right"><span class="offline">● 本機練習</span><a href="111-115會考英語_逐題分類.html" target="_blank">查看分類表 ↗</a></div></header>
+<dialog id="studentLogin"><form id="studentForm"><h2>學生登入</h2><p>請填寫資料，讓老師辨識成績。</p><label>班級 <input id="studentClass" maxlength="30" required></label><br><label>座號 <input id="studentNumber" maxlength="10" required></label><br><label>姓名 <input id="studentName" maxlength="30" required></label><p class="small">這是自行填寫的身分資料，並非 Google 帳號驗證。</p><button class="primary">開始作答</button></form></dialog><div class="shell"><aside class="sidebar">
+ <div class="eyebrow">YOUR PRACTICE</div><h1>每一次練習，<br>都更靠近理解。</h1><p class="muted">215 道歷屆試題 · 40 組閱讀素材</p>
+ <section class="setup"><h2>設定練習範圍</h2>
+ <label for="year">年度</label><select id="year"><option value="all">全部年度（111–115）</option><option>115</option><option>114</option><option>113</option><option>112</option><option>111</option></select>
+ <label for="type">題目分類</label><select id="type"><option value="all">全部題型</option><option>單字題</option><option>文法題</option><option>閱讀題組</option><option>篇章填空</option></select>
+ <label for="category">細部考點</label><select id="category"><option value="all">全部考點</option></select>
+ <div class="mode-label">作答方式</div><div class="modes"><label><input type="radio" name="mode" value="practice" checked>逐題練習<span>每題確認後看解析</span></label><label><input type="radio" name="mode" value="exam">測驗模式<span>整份交卷後公布答案</span></label></div>
+ <label class="check"><input id="shuffle" type="checkbox"> 隨機排列題目（題組保持一起）</label>
+ <button id="start" class="primary full">開始這份測驗 <span id="poolCount"></span></button><p id="setupMsg" class="small" role="status"></p>
+ </section>
+ <section class="nav-section"><div class="section-line"><h2>題目導覽</h2><span id="navCount"></span></div><div class="legend"><span>○ 未作答</span><span class="blue">● 已選</span><span class="green">✓ 答對</span><span class="red">× 答錯</span></div><div id="navigator" class="navigator"></div></section>
+ <button id="historyWrong" class="ghost full">重練歷次錯題 <span id="wrongCount">0</span></button><p id="saveStatus" class="small muted">作答進度自動保存在這個瀏覽器。</p>
+ <footer>原題與圖片：您提供的教用版試卷。<br>分類及重點解析為教學整理。</footer>
+</aside>
+<main>
+ <div class="workspace-head"><div><div class="eyebrow" id="modeName">PRACTICE / 逐題練習</div><h2 id="sessionTitle">115 年會考英語</h2></div><div class="timer" aria-label="經過時間">◷ <span id="timer">00:00</span></div></div>
+ <section class="progress-panel"><div class="progress-copy"><span id="progressText"></span><span id="scoreText"></span></div><div class="track"><div id="progressBar"></div></div></section>
+ <div id="workArea" class="workarea">
+  <section id="reading" class="reading card" aria-label="題組文章"><div class="card-head"><span>READING MATERIAL</span><button id="wideReading" class="text-btn">放大閱讀區</button></div><h3 id="readingTitle"></h3><p class="small muted">點選圖片可開啟大圖；同題組切換時保留閱讀位置。</p><div id="readingContent" class="reading-content"></div></section>
+  <section class="question card" id="questionCard"><div class="card-head"><span id="questionTag"></span><button id="bookmark" class="text-btn" aria-pressed="false">☆ 稍後複習</button></div><div class="question-number"><span id="questionNumber"></span><small id="questionPosition"></small></div><div id="questionImages" class="question-images"></div><div id="stem" class="stem" lang="en"></div><div id="options" class="options" role="group" aria-label="答案選項"></div><div id="feedback" class="feedback" aria-live="polite"></div><div class="question-actions"><button id="check" class="primary">確認答案</button><button id="clear" class="ghost">清除選擇</button><span id="selectionStatus" class="small" role="status"></span></div><div id="questionSource" class="source"></div></section>
+ </div>
+ <nav class="bottom-nav" aria-label="題目切換"><button id="prev" class="ghost">← 上一題</button><button id="submit" class="ghost">交卷與查看成績</button><button id="next" class="primary">下一題 →</button></nav>
+ <div id="summary" class="summary card" hidden></div>
+ <p class="keyboard-hint">快捷鍵：1–4 選答案 · ← → 切換題目 · Enter 確認答案</p>
+</main></div>
+<dialog id="imageDialog"><div class="dialog-toolbar"><span>原題圖片 · 可捲動檢視</span><button id="closeImage" class="ghost">關閉 ×</button></div><img id="largeImage" alt="原題圖片放大檢視"></dialog>
+<dialog id="submitDialog"><h2>準備交卷</h2><p id="submitMessage"></p><div class="dialog-actions"><button id="cancelSubmit" class="ghost">繼續作答</button><button id="confirmSubmit" class="primary">確定交卷</button></div></dialog>
+<script src="score-config.js"></script><script src="quiz-data.js"></script><script src="quiz.js"></script>
+</body></html>
